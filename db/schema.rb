@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130728160253) do
 
-  create_table "messages", force: true do |t|
+  create_table "chats", force: true do |t|
     t.string   "content"
     t.integer  "user_id"
     t.datetime "created_at"
