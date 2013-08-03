@@ -1,0 +1,23 @@
+<script id="current_user" type="text/json">
+  <%= current_user.email %>
+</script>
+
+<div id="chatbox">
+  <h3>Chat Room</h3>
+  <ul id="chat">
+    <% if @chats.count <= 10 %>
+      <%= render @chats %>
+    <% else %>
+      <%= render @chats[-10..-1] %>
+    <% end %>
+  </ul>
+
+  <%= form_for Chat.new, :remote => true do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit "Send" %>
+  <% end %>
+</div>
+
+<div id="membersbox">
+  <h3>Users Present</h3>
+</div>

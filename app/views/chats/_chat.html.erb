@@ -1,0 +1,7 @@
+<li>
+  <span class="time"><%= chat.created_at.strftime("%H:%M") %></span>
+  <span class="sender <%= "self" if chat.user.email == current_user.email %>">
+    <%= chat.user.email %>:
+  </span>
+  <span class="msg"><%= chat.content %></span>
+</li>
