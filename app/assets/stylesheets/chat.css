@@ -2,3 +2,37 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+#chatbox {
+  position: relative;
+  width: 45%;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  float: left;
+  padding: 10px;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+  form {
+    position: absolute;
+    bottom: 15px;
+  }
+}
+
+.time {
+  color: #888;
+}
+
+.sender {
+  font-weight: bold;
+  color: blue;
+}
+
+.sender.self {
+  color: red;
+}
+
+.msg {
+  word-wrap: break-word;
+}
